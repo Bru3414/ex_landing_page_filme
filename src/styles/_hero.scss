@@ -1,0 +1,21 @@
+@use 'variaveis';
+
+.hero {
+    
+    img {
+        width: 100%;
+        display: flex;
+        object-fit: cover;
+        max-height: 60vh;
+
+        @media (max-width: 767px) {
+            max-height: 300px;
+        }
+    
+        @media (max-width: 1023px) and (min-width: 768px) {
+            max-height: 500px;
+        }
+    }
+
+
+}
