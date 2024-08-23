@@ -4,16 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const questions = document.querySelectorAll('[data-faq-question]');
     const altHero = document.querySelector('.hero').clientHeight;
 
-    window.addEventListener('scroll', function() {
-        const positionY = window.scrollY;
-
-        if (positionY < altHero) {
-            hideHeader();
-        }else {
-            exibeHeader();
-        }
-    })
-
     // Seção de atrações, programação das abas
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao) {
@@ -32,18 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 })
-
-function hideHeader() {
-    const header = document.querySelector('header');
-
-    header.classList.add('header--is-hidden');
-}
-
-function exibeHeader() {
-    const header = document.querySelector('header');
-
-    header.classList.remove('header--is-hidden');
-}
 
 function hideOpenQuestion(elemento) {
     const classe = 'faq__questions__item--is-open';
